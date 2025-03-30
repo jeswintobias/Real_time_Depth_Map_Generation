@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processed Video</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Processed Video Output</h2>
+        <video controls>
+            <source src="{{ url_for('static', filename='output.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <br>
+        <a href="{{ url_for('static', filename='output.mp4') }}" download>
+            <button>Download Processed Video</button>
+        </a>
+    </div>
+</body>
+</html>
